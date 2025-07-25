@@ -15,11 +15,37 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation activeSection={activeSection} setActiveSection={setActiveSection} />
-      {activeSection === 'all' && <Hero />}
-      {(activeSection === 'all' || activeSection === 'about') && <About />}
-      {(activeSection === 'all' || activeSection === 'projects') && <Projects />}
-      {(activeSection === 'all' || activeSection === 'skills') && <Skills />}
-      {(activeSection === 'all' || activeSection === 'contact') && <Contact />}
+      <div className="transition-all duration-500 ease-in-out">
+        {activeSection === 'all' && (
+          <div className="animate-fade-in">
+            <Hero />
+            <About />
+            <Projects />
+            <Skills />
+            <Contact />
+          </div>
+        )}
+        {activeSection === 'about' && (
+          <div className="animate-fade-in">
+            <About />
+          </div>
+        )}
+        {activeSection === 'projects' && (
+          <div className="animate-fade-in">
+            <Projects />
+          </div>
+        )}
+        {activeSection === 'skills' && (
+          <div className="animate-fade-in">
+            <Skills />
+          </div>
+        )}
+        {activeSection === 'contact' && (
+          <div className="animate-fade-in">
+            <Contact />
+          </div>
+        )}
+      </div>
       <Footer />
     </div>
   );
