@@ -15,7 +15,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation activeSection={activeSection} setActiveSection={setActiveSection} />
-      <Hero />
+      {activeSection === 'all' && <Hero />}
       {(activeSection === 'all' || activeSection === 'about') && <About />}
       {(activeSection === 'all' || activeSection === 'projects') && <Projects />}
       {(activeSection === 'all' || activeSection === 'skills') && <Skills />}
