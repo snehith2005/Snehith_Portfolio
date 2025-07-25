@@ -1,7 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 
-const Navigation = () => {
+type ActiveSection = 'all' | 'about' | 'projects' | 'skills' | 'contact';
+
+interface NavigationProps {
+  activeSection: ActiveSection;
+  setActiveSection: (section: ActiveSection) => void;
+}
+
+const Navigation = ({ activeSection, setActiveSection }: NavigationProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -35,11 +42,21 @@ const Navigation = () => {
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
+            <button
+              onClick={() => setActiveSection('all')}
+              className={`transition-colors duration-300 ${
+                activeSection === 'all' ? 'text-foreground' : 'text-muted-foreground hover:text-foreground'
+              }`}
+            >
+              All
+            </button>
             {['About', 'Projects', 'Skills', 'Contact'].map((item) => (
               <button
                 key={item}
-                onClick={() => scrollToSection(item.toLowerCase())}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-300"
+                onClick={() => setActiveSection(item.toLowerCase() as ActiveSection)}
+                className={`transition-colors duration-300 ${
+                  activeSection === item.toLowerCase() ? 'text-foreground' : 'text-muted-foreground hover:text-foreground'
+                }`}
               >
                 {item}
               </button>

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
@@ -6,15 +7,19 @@ import Skills from '@/components/Skills';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
+type ActiveSection = 'all' | 'about' | 'projects' | 'skills' | 'contact';
+
 const Index = () => {
+  const [activeSection, setActiveSection] = useState<ActiveSection>('all');
+
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
+      <Navigation activeSection={activeSection} setActiveSection={setActiveSection} />
       <Hero />
-      <About />
-      <Projects />
-      <Skills />
-      <Contact />
+      {(activeSection === 'all' || activeSection === 'about') && <About />}
+      {(activeSection === 'all' || activeSection === 'projects') && <Projects />}
+      {(activeSection === 'all' || activeSection === 'skills') && <Skills />}
+      {(activeSection === 'all' || activeSection === 'contact') && <Contact />}
       <Footer />
     </div>
   );
