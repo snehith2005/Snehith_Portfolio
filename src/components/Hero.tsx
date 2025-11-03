@@ -18,7 +18,7 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             <span className="text-foreground">Hi, I'm </span>
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Alex Johnson
+              Nallapuram Snehith Reddy
             </span>
           </h1>
           
@@ -38,15 +38,24 @@ const Hero = () => {
             </Button>
             
             <div className="flex items-center gap-4">
-              <Button variant="outline" size="icon" className="hover:bg-accent transition-colors">
+              <Button variant="outline" size="icon" className="hover:bg-accent transition-colors" onClick={()=>window.open("https://github.com/snehith2005", "_blank")}>
                 <Github className="h-5 w-5" />
               </Button>
-              <Button variant="outline" size="icon" className="hover:bg-accent transition-colors">
+              <Button variant="outline" size="icon" className="hover:bg-accent transition-colors"onClick={() =>
+      window.open("https://www.linkedin.com/in/nallapuram-snehith-reddy-b0b061290", "_blank")
+    }>
                 <Linkedin className="h-5 w-5" />
               </Button>
-              <Button variant="outline" size="icon" className="hover:bg-accent transition-colors">
-                <Mail className="h-5 w-5" />
-              </Button>
+              <Button
+    variant="outline"
+    size="icon"
+    className="hover:bg-accent transition-colors"
+    onClick={() => {
+      window.location.href = "mailto:nallapuramsnehithreddy@gmail.com";
+    }}
+  >
+    <Mail className="h-5 w-5" />
+  </Button>
             </div>
           </div>
         </div>

@@ -28,7 +28,7 @@ const About = () => {
             About <span className="bg-gradient-primary bg-clip-text text-transparent">Me</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Passionate developer with 5+ years of experience building web applications 
+            Passionate developer with hands on experience building web applications 
             that solve real-world problems and create meaningful user experiences.
           </p>
         </div>
@@ -36,7 +36,7 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I specialize in React, TypeScript, and Node.js, with a keen eye for design 
+              I specialize in React, javaScript, and Node.js, with a keen eye for design 
               and user experience. My journey in tech started with a curiosity about how 
               things work, and it's grown into a passion for creating digital solutions 
               that make a difference.

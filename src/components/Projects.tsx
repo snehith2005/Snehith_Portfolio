@@ -8,29 +8,22 @@ import project3 from '@/assets/project-3.jpg';
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution built with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.",
+      title: "AI_Driven_Virtual_Interviewer",
+      description: "A full-stack Application built with React, Node.js, and MongoDB. Features include user authentication,AI Interview practise, Feedback & Score",
       image: project1,
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe"],
+      technologies: ["React", "Node.js", "MongoDB", "NLP"],
       liveUrl: "#",
-      githubUrl: "#"
+      githubUrl: "https://github.com/snehith2005/AI_Driven_Virtual_Interviewer"
     },
     {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, team collaboration features, and intuitive drag-and-drop interface.",
+      title: "Wanderlust",
+      description: "a travel planning and exploration platform designed to help users discover new destinations, and connect with fellow travelers, budget estimations, and AI-powered trip recommendations based on user interests and preferences.",
       image: project2,
       technologies: ["React", "TypeScript", "Socket.io", "MongoDB"],
-      liveUrl: "#",
-      githubUrl: "#"
+      liveUrl: "https://wanderlust-43js.onrender.com/listings",
+      githubUrl: "https://github.com/snehith2005/Wanderlust"
     },
-    {
-      title: "Analytics Dashboard",
-      description: "A comprehensive analytics dashboard for businesses to track KPIs, generate reports, and visualize data with interactive charts and graphs.",
-      image: project3,
-      technologies: ["React", "D3.js", "Express", "Redis"],
-      liveUrl: "#",
-      githubUrl: "#"
-    }
+    
   ];
 
   return (
@@ -77,11 +70,11 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex gap-3">
-                  <Button size="sm" className="bg-gradient-primary hover:shadow-glow transition-all duration-300">
+                  <Button size="sm" className="bg-gradient-primary hover:shadow-glow transition-all duration-300" onClick={()=>{window.open(project.liveUrl,"_blank")}}>
                     <ExternalLink className="h-4 w-4 mr-2" />
                     Live Demo
                   </Button>
-                  <Button variant="outline" size="sm" className="hover:bg-accent transition-colors">
+                  <Button variant="outline" size="sm" className="hover:bg-accent transition-colors" onClick={()=>{window.open(project.githubUrl,"_blank")}}>
                     <Github className="h-4 w-4 mr-2" />
                     Code
                   </Button>

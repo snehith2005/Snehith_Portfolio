@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="text-center md:text-left mb-6 md:mb-0">
             <h3 className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
-              Alex Johnson
+              Nallapuram Snehith Reddy
             </h3>
             <p className="text-muted-foreground">
               Full-Stack Developer & UI/UX Enthusiast
@@ -18,20 +18,20 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center gap-4 mb-6 md:mb-0">
-            <Button variant="ghost" size="icon" className="hover:bg-accent transition-colors">
+            <Button variant="ghost" size="icon" className="hover:bg-accent transition-colors" onClick={()=>window.open("https://github.com/snehith2005/")}>
               <Github className="h-5 w-5" />
             </Button>
-            <Button variant="ghost" size="icon" className="hover:bg-accent transition-colors">
+            <Button variant="ghost" size="icon" className="hover:bg-accent transition-colors" onClick={()=>window.open("https://www.linkedin.com/in/nallapuram-snehith-reddy-b0b061290/")}>
               <Linkedin className="h-5 w-5" />
             </Button>
-            <Button variant="ghost" size="icon" className="hover:bg-accent transition-colors">
+            <Button variant="ghost" size="icon" className="hover:bg-accent transition-colors" onClick={() => window.location.href = "mailto:snehithreddy@gmail.com"}>
               <Mail className="h-5 w-5" />
             </Button>
           </div>
 
           <div className="text-center md:text-right">
             <p className="text-muted-foreground flex items-center justify-center md:justify-end">
-              Made with <Heart className="h-4 w-4 mx-1 text-red-500" /> © {currentYear}
+              © {currentYear}
             </p>
           </div>
         </div>
