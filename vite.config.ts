@@ -4,16 +4,17 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: "/", // ensures correct asset paths in production
+  base: "/", // ensures correct asset paths
 
   server: {
-    host: true,  // instead of "::"
-    port: 8080,  // for local dev
+    host: true,
+    port: 8080,
   },
 
   preview: {
-    host: true,  // required for Render
-    port: 10000, // Render uses this internally
+    host: true,
+    port: 10000,
+    allowedHosts: ["snehith-portfolio.onrender.com"], // ✅ added this
   },
 
   plugins: [
