@@ -12,7 +12,7 @@ const Projects = () => {
       description: "A full-stack Application built with React, Node.js, and MongoDB. Features include user authentication,AI Interview practise, Feedback & Score",
       image: project1,
       technologies: ["React", "Node.js", "MongoDB", "NLP"],
-      liveUrl: "#",
+      liveUrl: "https://ai-driven-virtual-interviewer.onrender.com",
       githubUrl: "https://github.com/snehith2005/AI_Driven_Virtual_Interviewer"
     },
     {
@@ -23,7 +23,6 @@ const Projects = () => {
       liveUrl: "https://wanderlust-43js.onrender.com/listings",
       githubUrl: "https://github.com/snehith2005/Wanderlust"
     },
-    
   ];
 
   return (
