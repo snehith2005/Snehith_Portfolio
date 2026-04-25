@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { ExternalLink, Github } from 'lucide-react';
 import project1 from '@/assets/project-1.jpg';
 import project2 from '@/assets/project-2.jpg';
-import project3 from '@/assets/project-3.jpg';
+import project3 from '@/assets/project-3.png';
 
 const Projects = () => {
   const projects = [
@@ -14,6 +14,14 @@ const Projects = () => {
       technologies: ["React", "Node.js", "MongoDB", "NLP"],
       liveUrl: "https://ai-driven-virtual-interviewer.onrender.com",
       githubUrl: "https://github.com/snehith2005/AI_Driven_Virtual_Interviewer"
+    },
+    {
+      title: "AI-Powered E-Commerce Comparison Platform",
+      description: "a travel planning and exploration platform designed to help users discover new destinations, and connect with fellow travelers, budget estimations, and AI-powered trip recommendations based on user interests and preferences.",
+      image: project3,
+      technologies: ["React", "java", "Python", "Postgresql","AI"],
+      liveUrl: "",
+      githubUrl: "https://github.com/snehith2005/AI-Product-Curator"
     },
     {
       title: "Wanderlust",
